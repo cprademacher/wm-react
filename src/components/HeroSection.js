@@ -15,14 +15,14 @@ function HeroSection() {
           buttonStyle="btn--outline"
           buttonSize="btn--large "
         >
-          EPIC PASS
+          EPIC PASS <i className="fas fa-mountain fa-xs"></i>
         </Button>
         <Button
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--large "
         >
-          IKON PASS
+          IKON PASS <i className="fas fa-mountain fa-xs"></i>
         </Button>
       </div>
     </div>

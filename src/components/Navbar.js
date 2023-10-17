@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { Button } from "./Button";
 
+
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -29,7 +30,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            WM <i class="fa-solid fa-person-snowboarding"></i>
+            WM <i className="fas fa-mountain fa-xs"></i>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
