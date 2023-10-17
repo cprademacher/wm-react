@@ -8,7 +8,7 @@ function Footer() {
     <div className="footer-container">
       <section className="footer-subscription">
         <p className="footer-subscription-heading">
-          Join the Adventure newsletter to receive our best vacation deals
+          Join the Which Mountain newsletter to receive updates
         </p>
         <p className="footer-subscription-text">
           You can unsubscribe at any time.
@@ -54,20 +54,21 @@ function Footer() {
           <div className="footer-link-items">
             <h2>Social Media</h2>
             <Link to="/">Instagram</Link>
-            <Link to="/">Facebook</Link>
+            <Link to="/">Facebook - Meta</Link>
             <Link to="/">YouTube</Link>
-            <Link to="/">Twitter</Link>
+            <Link to="/">Twitter - X</Link>
+            <Link to="/">LinkedIn</Link>
           </div>
         </div>
       </div>
       <section className="social-media">
         <div className="social-media-wrap">
           <div className="footer-logo">
-            <Link to="/" className="social-logo">
-              TRVL <i className="fab fa-typo3"></i>
-            </Link>
+          <Link to="/" className="navbar-logo">
+            WM <i className="fas fa-mountain fa-xs"></i>
+          </Link>
           </div>
-          <small className="website-rights">TRVL © 2023</small>
+          <small className="website-rights">WHICH MOUNTAIN © 2023</small>
           <div className="social-icons">
             <Link
               className="social-icon-link facebook"
