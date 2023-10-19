@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "./Button";
+import { SignUpButton } from "./SignUpButton";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
@@ -21,7 +21,7 @@ function Footer() {
               name="email"
               placeholder="Your Email"
             />
-            <Button buttonStyle="btn--outline">Subscribe</Button>
+            <SignUpButton buttonStyle="btn--outline">Subscribe</SignUpButton>
           </form>
         </div>
       </section>
@@ -64,9 +64,9 @@ function Footer() {
       <section className="social-media">
         <div className="social-media-wrap">
           <div className="footer-logo">
-          <Link to="/" className="navbar-logo">
-            WM <i className="fas fa-mountain fa-xs"></i>
-          </Link>
+            <Link to="/" className="navbar-logo">
+              WM <i className="fas fa-mountain fa-xs"></i>
+            </Link>
           </div>
           <small className="website-rights">WHICH MOUNTAIN © 2023</small>
           <div className="social-icons">

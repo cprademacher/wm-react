@@ -1,6 +1,7 @@
 import React from "react";
-import '../App.css';
-import { Button } from "./Button";
+import "../App.css";
+import { EpicButton } from "./EpicButton";
+import { IkonButton } from "./IkonButton";
 import "./HeroSection.css";
 
 function HeroSection() {
@@ -10,20 +11,20 @@ function HeroSection() {
       <h1>Which Mountain</h1>
       <p>Scroll to see all mountains or choose your pass!</p>
       <div className="hero-btns">
-        <Button
+        <EpicButton
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--large "
         >
-          EPIC PASS <i className="fas fa-mountain fa-xs"></i>
-        </Button>
-        <Button
+          Epic Mountains <i className="fas fa-mountain fa-xs"></i>
+        </EpicButton>
+        <IkonButton
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--large "
         >
-          IKON PASS <i className="fas fa-mountain fa-xs"></i>
-        </Button>
+          Ikon Mountains <i className="fas fa-mountain fa-xs"></i>
+        </IkonButton>
       </div>
     </div>
   );
