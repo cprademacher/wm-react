@@ -5,7 +5,7 @@ import "./Cards.css";
 function EpicCards() {
   return (
     <div className="cards">
-      <h1>Have an Epic Pass? Here's your mountains!</h1>
+      <h1>Have an Epic Pass? Here are your mountains!</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">

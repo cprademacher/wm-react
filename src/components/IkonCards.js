@@ -5,7 +5,7 @@ import "./Cards.css";
 function IkonCards() {
   return (
     <div className="cards">
-      <h1>Have an Ikon Pass?  Here's your mountains!</h1>
+      <h1>Have an Ikon Pass?  Here are your mountains!</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
