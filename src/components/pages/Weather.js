@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from '../Navbar';
 
-function Services() {
+function Weather() {
   return (
     <div>
         <Navbar />
-        <h1 className='services'>SERVICES</h1>
+        <h1 className='weather'>Weather</h1>
     </div>
   )
 }
 
-export default Services
+export default Weather
