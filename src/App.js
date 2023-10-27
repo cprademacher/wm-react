@@ -30,6 +30,10 @@ const router = createBrowserRouter([
     path: "/weather",
     element: <Weather />
   },
+  {
+    path: "/weather/:mountain-weather",
+    element: <Weather />
+  },
 ]);
 
 function App() {

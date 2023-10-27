@@ -19,7 +19,7 @@ function Cards() {
               src="https://res.cloudinary.com/liftopia/image/upload/c_fit,d_defaults:default_logo_1.png,f_auto,h_800,q_auto,w_800/v1/production/trail_maps/835b7f313bb133afa7da31c1209d9728.jpg"
               text="When new snow at Aspen Highlands reaches mammoth proportions, you’re in for a epic day of Colorado’s signature light-and-dry powder. Insiders at the ski area recommend studying the trail map to find hidden gems that drop into gladed, untouched expert areas."
               label="ASPEN HIGHLANDS"
-              path="/weather"
+              path="/weather/aspen-highlands"
             />
           </ul>
           <ul className="cards__items">
