@@ -1,6 +1,9 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import CardItem from "./CardItem";
 import "./Cards.css";
+
+import API from '../utils/API';
 
 function Cards() {
   return (

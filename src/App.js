@@ -27,10 +27,6 @@ const router = createBrowserRouter([
     element: <Epic />,
   },
   {
-    path: "/weather",
-    element: <Weather />
-  },
-  {
     path: "/weather/:mountain-weather",
     element: <Weather />
   },
