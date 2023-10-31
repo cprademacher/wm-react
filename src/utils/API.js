@@ -3,14 +3,14 @@ import axios from "axios";
 const apiKey = "484da9db5d4a9dce2a111a2bc5be9943";
 const country = "US";
 
-const getWeatherByCity = () =>
+const getWeatherByCity = (paramName) =>
   axios.get(
-    `https://api.openweathermap.org/data/2.5/weather?q=${paramId},${country}&appid=${apiKey}&units=imperial`
+    `https://api.openweathermap.org/data/2.5/weather?q=${paramName},${country}&appid=${apiKey}&units=imperial`
   );
 
-const getForecastByCity = () =>
+const getForecastByCity = (paramName) =>
   axios.get(
-    `https://api.openweathermap.org/data/2.5/forecast?q=${paramId},${country}&appid=${apiKey}&units=imperial`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${paramName},${country}&appid=${apiKey}&units=imperial`
   );
 
 export default {
