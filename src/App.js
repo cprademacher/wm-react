@@ -28,7 +28,8 @@ const router = createBrowserRouter([
     element: <Epic />,
   },
   {
-    path: "/weather/:mountain-weather",
+    // change to /mountainName/weather
+    path: "/weather/:mountainName",
     element: <Weather />,
   },
   {

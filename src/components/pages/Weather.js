@@ -6,8 +6,8 @@ import Navbar from "../Navbar";
 import API from "../../utils/API";
 
 function Weather() {
-  const [weather, setWeather] = useState({});
-  const [forecast, setForecast] = useState({});
+  const [weather, setWeather] = useState(null);
+  const [forecast, setForecast] = useState(null);
 
   const { mountainName } = useParams();
 
@@ -25,12 +25,14 @@ function Weather() {
 
   useEffect(() => {
     fetchWeatherData();
-  });
+  }, []);
 
   useEffect(() => {
     fetchForecastData();
-  });
-
+  }, []);
+  if (!weather) {
+    return <Navbar />;
+  }
   return (
     <div>
       <Navbar />
@@ -38,11 +40,11 @@ function Weather() {
         <div class="container" id="current-weather">
           <h3>
             <span id="city">{mountainName}</span> <span id="date"></span>{" "}
-            <img
+            {/* <img
               src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
               id="todays-icon"
               alt="today's icon"
-            />
+            /> */}
           </h3>
           <p id="todays-temp">Temp: {weather.main.temp} F</p>
           <p id="todays-wind">Wind: {weather.wind.speed} MPH</p>

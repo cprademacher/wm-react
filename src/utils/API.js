@@ -5,12 +5,12 @@ const country = "US";
 
 const getWeatherByCity = (paramName) =>
   axios.get(
-    `https://api.openweathermap.org/data/2.5/weather?q=${paramName},${country}&appid=${apiKey}&units=imperial`
+    `https://api.openweathermap.org/data/2.5/weather?q=chicago,${country}&appid=${apiKey}&units=imperial`
   );
 
 const getForecastByCity = (paramName) =>
   axios.get(
-    `https://api.openweathermap.org/data/2.5/forecast?q=${paramName},${country}&appid=${apiKey}&units=imperial`
+    `https://api.openweathermap.org/data/2.5/forecast?q=chicago,${country}&appid=${apiKey}&units=imperial`
   );
 
 export default {
