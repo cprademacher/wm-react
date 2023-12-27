@@ -1,5 +1,5 @@
-import React from "react";
-// import Navbar from "./components/Navbar";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Home from "./components/pages/Home";
@@ -39,9 +39,35 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const [serverMessage, setServerMessage] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8081")
+      .then((response) => {
+        setServerMessage(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setError("An error occurred while fetching data.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
+
+  if (error) {
+    return <h1>{error}</h1>
+  }
+
   return (
     <div>
-      {/* <Navbar /> */}
       <RouterProvider router={router} />
     </div>
   );
