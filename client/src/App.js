@@ -39,7 +39,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const [serverMessage, setServerMessage] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -47,7 +46,7 @@ function App() {
     axios
       .get("http://localhost:8081")
       .then((response) => {
-        setServerMessage(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -59,11 +58,11 @@ function App() {
   }, []);
 
   if (loading) {
-    return <h1>Loading...</h1>
+    return <h1>Loading...</h1>;
   }
 
   if (error) {
-    return <h1>{error}</h1>
+    return <h1>{error}</h1>;
   }
 
   return (

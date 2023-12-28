@@ -1,0 +1,17 @@
+{
+  "name": "wm-react",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js", // Change this based on your server start command
+    "client": "cd client && npm start" // Change this based on your client start command
+  },
+  "keywords": [],
+  "author": "Cody Rademacher",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
