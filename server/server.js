@@ -1,12 +1,15 @@
 const express = require("express");
+const cors = require("cors");
 const path = require("path");
 const PORT = process.env.PORT || 8081;
 
 const app = express();
 
+app.use(cors());
+app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-app.get('/api/data', (req, res) => {
+app.get('/message', (req, res) => {
     res.json({ message: 'Hello from the server!' });
   });
 
