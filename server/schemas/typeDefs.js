@@ -28,11 +28,6 @@ const typeDefs = `
     mountains(_id: ID): [Mountain]
     mountain(_id: ID): Mountain
   }
-
-  type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
-    login(email: String!, password: String!): Auth
-  }
 `;
 
 module.exports = typeDefs;
