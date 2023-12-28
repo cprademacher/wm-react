@@ -13,8 +13,8 @@ const typeDefs = `
     imageUrl: String
     description: String
     pass: String
-    lat: Number
-    long: Number
+    lat: Float
+    long: Float
   }
 
   type Auth {
@@ -25,6 +25,8 @@ const typeDefs = `
   type Query {
     users: [User]
     user(username: String!): User
+    mountains(_id: ID): [Mountain]
+    mountain(_id: ID): Mountain
   }
 
   type Mutation {

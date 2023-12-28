@@ -9,7 +9,7 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate("mountains");
     },
-    mountain: async (parent, { username }) => {
+    mountains: async (parent, { username }) => {
       const params = username ? { username } : {};
       return Mountain.find(params).sort({ createdAt: -1 });
     },
