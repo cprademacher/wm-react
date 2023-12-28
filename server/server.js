@@ -1,43 +1,40 @@
 const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+const { ApolloServer } = require("@apollo/server");
+const { expressMiddleware } = require("@apollo/server/express4");
 const path = require("path");
-const dotenv = require("dotenv");
 
-dotenv.config();
+const { typeDefs, resolvers } = require("./schemas");
+const db = require("./config/connection");
 
+const PORT = process.env.PORT || 3001;
 const app = express();
-
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static(path.join(__dirname, "../client/build")));
-
-const mongoURI = process.env.MONGO_URI;
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
-const connection = mongoose.connection;
-
-connection.once("open", () => {
-  console.log("MongoDB database connected successfully.");
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
 });
 
-const userRoutes = require("./routes/userRoutes");
-const mountainRoutes = require("./routes/mountainRoutes");
+const startApolloServer = async () => {
+  await server.start();
 
-app.use("/api/users", userRoutes);
-app.use("/api/mountains", mountainRoutes);
+  app.use(express.urlencoded({ extended: false }));
+  app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send({ message: "Hello from the server!" });
-});
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../client/dist")));
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-});
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+    });
+  }
 
-const PORT = process.env.PORT || 8081;
+  app.use("/graphql", expressMiddleware(server));
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on port: ${PORT}`);
-});
+  db.once("open", () => {
+    app.listen(PORT, () => {
+      console.log(`API server running on port ${PORT}!`);
+      console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+    });
+  });
+};
+
+startApolloServer();
