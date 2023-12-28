@@ -39,15 +39,17 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081")
+      .get("http://localhost:8081/message")
       .then((response) => {
-        console.log(response.data);
+        response.json();
       })
+      .then((data) => setMessage(data.message))
       .catch((error) => {
         console.error("Error fetching data:", error);
         setError("An error occurred while fetching data.");
@@ -67,7 +69,8 @@ function App() {
 
   return (
     <div>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      {message}
     </div>
   );
 }
