@@ -37,7 +37,7 @@ export default function FutureWeatherForecast() {
 
   return (
     <div id="five-day-forecast">
-      <div>
+      <div id="forecast-title">
         <h3>Five Day Forecast:</h3>
       </div>
       {weatherData && selectedMountain && (
