@@ -1,3 +1,16 @@
+.whole {
+    display: flex;
+}
+
+.left, .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
 #current-weather {
     width: 100%;
     display: flex;
@@ -7,4 +20,37 @@
     padding: 50px;
     margin: 20px 0;
     border: 1px solid black;
+    background: linear-gradient(to right, #ccc, #aaa);
+}
+
+#current-weather-header {
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    font-size: 1.9em;
+}
+
+#current-weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 768px) {
+    .whole {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
 }

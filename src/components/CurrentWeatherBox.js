@@ -32,13 +32,35 @@ export default function CurrentWeatherBox() {
     <div className="container" id="current-weather">
       {weatherData && selectedMountain && (
         <>
-          <h3>
-            <span id="city">{selectedMountain.name} Weather</span>{" "}
-            {/* You can use the weatherData to display relevant information */}
-          </h3>
-          <p id="todays-temp">Temp: {weatherData.current.temp} F</p>
-          <p id="todays-wind">Wind: {weatherData.current.wind_speed} MPH</p>
-          <p id="todays-humidity">Humidity: {weatherData.current.humidity}%</p>
+          <div className="whole">
+            <div className="left">
+              <div id="current-weather-header">
+                <h3>
+                  <span id="city">{selectedMountain.name}</span>{" "}
+                  {/* You can use the weatherData to display relevant information */}
+                </h3>
+                <img
+                  src={`http://openweathermap.org/img/wn/${weatherData.daily[0].weather[0].icon}.png`}
+                  id="todayWeatherIcon"
+                  alt="today's weather icon"
+                />
+              </div>
+              <div id="current-weather-info">
+                <p>Current Temp: {weatherData.current.temp} F</p>
+                <p id="todays-high">High: {weatherData.daily[0].temp.max} F</p>
+                <p id="todays-low">Low: {weatherData.daily[0].temp.min} F</p>
+                <p id="todays-description">
+                  Conditions: {weatherData.daily[0].weather[0].description}
+                </p>
+              </div>
+            </div>
+            <div className="right">
+              <h3>Mountain Description</h3>
+              <p className="mountain-description">
+                {selectedMountain.description}
+              </p>
+            </div>
+          </div>
         </>
       )}
     </div>
