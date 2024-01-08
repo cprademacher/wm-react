@@ -13,7 +13,7 @@ function EpicCards() {
               src="https://files.skimap.org/g7h3ja29nc7c60g5dquqp6damw5x"
               text="Beaver Creek charms with fantastic extras: Heated moving walkways, fresh-baked cookies, a first-tracks program for early risers, a white-carpet club, wine-and-snowshoe excursions and acres of corduroy and powder waiting for skiers and riders to swish through."
               label="BEAVER CREEK"
-              path="/weather/beaver-creek-mountain"
+              path="/weather/beaver-creek"
             />
             <CardItem
               src="https://www.visitbreck.com/sites/default/files/uploads/trail_maps_1.jpg"

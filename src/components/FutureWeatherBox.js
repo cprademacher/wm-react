@@ -49,6 +49,7 @@ export default function FutureWeatherForecast() {
               id="d1weathericon"
               alt="day 1 icon"
             />
+            <p id="d1snow">Snow: {weatherData.daily[1].snow} Inches</p>
             <p id="d1high">High: {weatherData.daily[1].temp.max}F</p>
             <p id="d1low">Low: {weatherData.daily[1].temp.min}F</p>
             <p id="d1humidity">
@@ -57,57 +58,61 @@ export default function FutureWeatherForecast() {
           </div>
 
           <div className="forecast-day col-xs-6 col-lg-2" id="day2">
-            <h4 id="d1date">{formatDate(weatherData.daily[2].dt)}</h4>
+            <h4 id="d2date">{formatDate(weatherData.daily[2].dt)}</h4>
             <img
               src={`http://openweathermap.org/img/wn/${weatherData.daily[2].weather[0].icon}.png`}
               id="d1weathericon"
               alt="day 1 icon"
             />
-            <p id="d1high">High: {weatherData.daily[2].temp.max}F</p>
-            <p id="d1low">Low: {weatherData.daily[2].temp.min}F</p>
-            <p id="d1humidity">
+            <p id="d1snow">Snow: {weatherData.daily[2].snow} Inches</p>
+            <p id="d2high">High: {weatherData.daily[2].temp.max}F</p>
+            <p id="d2low">Low: {weatherData.daily[2].temp.min}F</p>
+            <p id="d2description">
               Description: {weatherData.daily[2].weather[0].description}
             </p>
           </div>
 
           <div className="forecast-day col-xs-6 col-lg-2" id="day3">
-            <h4 id="d1date">{formatDate(weatherData.daily[3].dt)}</h4>
+            <h4 id="d3date">{formatDate(weatherData.daily[3].dt)}</h4>
             <img
               src={`http://openweathermap.org/img/wn/${weatherData.daily[3].weather[0].icon}.png`}
               id="d1weathericon"
               alt="day 1 icon"
             />
-            <p id="d1high">High: {weatherData.daily[3].temp.max}F</p>
-            <p id="d1low">Low: {weatherData.daily[3].temp.min}F</p>
-            <p id="d1humidity">
+            <p id="d3snow">Snow: {weatherData.daily[3].snow} Inches</p>
+            <p id="d3high">High: {weatherData.daily[3].temp.max}F</p>
+            <p id="d3low">Low: {weatherData.daily[3].temp.min}F</p>
+            <p id="d3description">
               Description: {weatherData.daily[3].weather[0].description}
             </p>
           </div>
 
           <div className="forecast-day col-xs-6 col-lg-2" id="day4">
-            <h4 id="d1date">{formatDate(weatherData.daily[4].dt)}</h4>
+            <h4 id="d4date">{formatDate(weatherData.daily[4].dt)}</h4>
             <img
               src={`http://openweathermap.org/img/wn/${weatherData.daily[4].weather[0].icon}.png`}
               id="d1weathericon"
-              alt="day 1 icon"
+              alt="day 4 icon"
             />
-            <p id="d1high">High: {weatherData.daily[4].temp.max}F</p>
-            <p id="d1low">Low: {weatherData.daily[4].temp.min}F</p>
-            <p id="d1humidity">
+            <p id="d4snow">Snow: {weatherData.daily[4].snow} Inches</p>
+            <p id="d4high">High: {weatherData.daily[4].temp.max}F</p>
+            <p id="d4low">Low: {weatherData.daily[4].temp.min}F</p>
+            <p id="d4description">
               Description: {weatherData.daily[4].weather[0].description}
             </p>
           </div>
 
           <div className="forecast-day col-xs-6 col-lg-2" id="day5">
-            <h4 id="d1date">{formatDate(weatherData.daily[5].dt)}</h4>
+            <h4 id="d5date">{formatDate(weatherData.daily[5].dt)}</h4>
             <img
               src={`http://openweathermap.org/img/wn/${weatherData.daily[5].weather[0].icon}.png`}
               id="d1weathericon"
               alt="day 1 icon"
             />
-            <p id="d1high">High: {weatherData.daily[5].temp.max}F</p>
-            <p id="d1low">Low: {weatherData.daily[5].temp.min}F</p>
-            <p id="d1humidity">
+            <p id="d5snow">Snow: {weatherData.daily[5].snow} Inches</p>
+            <p id="d5high">High: {weatherData.daily[5].temp.max}F</p>
+            <p id="d5low">Low: {weatherData.daily[5].temp.min}F</p>
+            <p id="d5description">
               Description: {weatherData.daily[5].weather[0].description}
             </p>
           </div>

@@ -45,8 +45,9 @@ export default function CurrentWeatherBox() {
                   alt="today's weather icon"
                 />
               </div>
+              <h4>Pass: {selectedMountain.pass}</h4>
               <div id="current-weather-info">
-                <p>Current Temp: {weatherData.current.temp} F</p>
+                <p>Snow: {weatherData.daily[0].snow} Inches</p>
                 <p id="todays-high">High: {weatherData.daily[0].temp.max} F</p>
                 <p id="todays-low">Low: {weatherData.daily[0].temp.min} F</p>
                 <p id="todays-description">
