@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-whichmountain-staging-151540-authRole",
+      "UnauthRoleArn": "arn:aws:iam::880587507774:role/amplify-whichmountain-staging-151540-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::880587507774:role/amplify-whichmountain-staging-151540-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-whichmountain-staging-151540-deployment",
+      "UnauthRoleName": "amplify-whichmountain-staging-151540-unauthRole",
+      "StackName": "amplify-whichmountain-staging-151540",
+      "StackId": "arn:aws:cloudformation:us-east-1:880587507774:stack/amplify-whichmountain-staging-151540/a1b06a80-a401-11ee-8462-0e29ea345f1f",
+      "AmplifyAppId": "duvrlthjk7a79"
+    }
+  }
+}
