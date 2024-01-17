@@ -7,7 +7,7 @@ import "./HeroSection.css";
 function HeroSection() {
   return (
     <div className="hero-container">
-      <video src="s3://which-mountain/video-3.mp4" autoPlay loop muted></video>
+      <video src="https://which-mountain.s3.amazonaws.com/video-3.mp4" autoPlay loop muted></video>
       <h1>Which Mountain</h1>
       <p>Scroll to see all mountains or choose your pass!</p>
       <div className="hero-btns">
